@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>puzzle</title>
+</head>
+<body >
+<button type="button" id="button1" onclick="picture1(1)" ><img id="anh1" src="anh1-1.jpg" height="80" width="700"/></button>
+<button type="button" id="button2" onclick="picture1(2)" ><img id="anh2" src="anh3-2.jpg" height="80" width="700"/></button>
+<button type="button" id="button3" onclick="picture1(3)" ><img id="anh3" src="anh2-3.jpg" height="80" width="700"/></button>
+<button type="button" id="button4" onclick="picture1(4)" ><img id="anh4" src="anh1-4.jpg" height="80" width="700"/></button>
+<button type="button" id="button5" onclick="picture1(5)" ><img id="anh5" src="anh3-5.jpg" height="80" width="700"/></button>
+    <script>
+        function picture1(giatri) {
+            switch (giatri) {
+                case 1:
+                    let image1 = document.getElementById("anh1");
+                    if (image1.src.match("anh1-1")) {
+                        image1.src = "anh3-1.jpg";
+                    } else if (image1.src.match("anh3-1")) {
+                        image1.src = "anh2-1.jpg";
+                    } else {
+                        image1.src = "anh1-1.jpg";
+                    }
+                    break;
+                case 2:
+                    let image2 = document.getElementById("anh2");
+                    if (image2.src.match("anh1-2")) {
+                        image2.src = "anh2-2.jpg";
+                    } else if (image2.src.match("anh2-2")) {
+                        image2.src = "anh3-2.jpg";
+                    } else {
+                        image2.src = "anh1-2.jpg";
+                    }
+                    break;
+                case 3:
+                    let image3 = document.getElementById("anh3");
+                    if (image3.src.match("anh1-3")) {
+                        image3.src = "anh2-3.jpg";
+                    } else if (image3.src.match("anh2-3")) {
+                        image3.src = "anh3-3.jpg";
+                    } else {
+                        image3.src = "anh1-3.jpg";
+                    }
+                    break;
+                case 4:
+                    let image4 = document.getElementById("anh4");
+                    if (image4.src.match("anh1-4")) {
+                        image4.src = "anh3-4.jpg";
+                    } else if (image4.src.match("anh3-4")) {
+                        image4.src = "anh2-4.jpg";
+                    } else {
+                        image4.src = "anh1-4.jpg";
+                    }
+                    break;
+                case 5:
+                    let image5 = document.getElementById("anh5");
+                    if (image5.src.match("anh3-5")) {
+                        image5.src = "anh1-5.jpg";
+                    } else if (image5.src.match("anh1-5")) {
+                        image5.src = "anh2-5.jpg";
+                    } else {
+                        image5.src = "anh3-5.jpg";
+                    }
+                    break;
+            }
+            if ((anh1.src.match('anh1-1') && anh2.src.match('anh1-2') && anh3.src.match('anh1-3') && anh4.src.match('anh1-4') && anh5.src.match('anh1-5')
+                ) || (anh1.src.match('anh2-1') && anh2.src.match('anh2-2') && anh3.src.match('anh2-3') && anh4.src.match('anh2-4') && anh5.src.match('anh2-5')) ||
+                (anh1.src.match('anh3-1') && anh2.src.match('anh3-2') && anh3.src.match('anh3-3') && anh4.src.match('anh3-4') && anh5.src.match('anh3-5'))) {
+                document.getElementById("button1").style.borderColor = 'red';
+                document.getElementById("button2").style.borderColor = 'red';
+                document.getElementById("button3").style.borderColor = 'red';
+                document.getElementById("button4").style.borderColor = 'red';
+                document.getElementById("button5").style.borderColor = 'red';
+                }else {
+                document.getElementById("button1").style.borderColor = '';
+                document.getElementById("button2").style.borderColor = '';
+                document.getElementById("button3").style.borderColor = '';
+                document.getElementById("button4").style.borderColor = '';
+                document.getElementById("button5").style.borderColor = '';
+                }
+        }
+        </script>
+
+</body>
+</html>
